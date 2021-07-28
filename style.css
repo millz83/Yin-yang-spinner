@@ -1,0 +1,67 @@
+body {
+    background-color: teal;
+}
+
+
+
+
+.yin {
+    position: relative;
+    width:48px;
+    height:96px;
+    margin:150px auto;
+    border-radius: 50%;
+    border:solid black;
+    border-width: 2px 2px 2px 50px;
+    transform: scale(2,2);
+}
+
+.yin:before,
+.yin:after {
+    position: absolute;
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    content:'';
+
+}
+
+.yin:before {
+    top:0;
+    left:-50%;
+    background:black;
+    border:18px solid teal;
+}
+
+.yin:after {
+    left:-50%;
+    top:50%;
+    background: teal;
+    border:18px solid black;
+}
+
+.yin:hover {
+    -webkit-animation:yin 6s ease infinite;
+    animation:yin 6s ease infinite;
+}
+
+
+@-webkit-keyframes yin {
+    0%{transform:rotate(0deg)
+    scale(2,2); 
+}
+    50%{transform:rotate(360deg)
+    scale(3.5,3.5); 
+}
+100% {transform:rotate(0deg)
+scale(2,2);
+}
+
+@keyframes yin{
+    0% {transform:rotate(0deg) scale(2,2);
+    }
+    50% {transform:rotate(360deg) scale(3.5,3.5);
+    }
+    100% {transform:rotate(0deg) scale(2,2);
+    }
+
